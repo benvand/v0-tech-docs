@@ -270,9 +270,9 @@ To provide user-level authorisation
 
 Use user-level authorisation if you want to control which end users can access your API. This is suitable for dealing with personal or sensitive data.
 
-For example, [OAuth 2.0](https://oauth.net/) is a popular authorisation method in government, specifically with the Authorisation Code grant type. Use OAuth 2.0 Scopes for more granular access control.
+We recommend using [OAuth 2.0](https://oauth.net/), the open authorisation framework (specifically with the Authorisation Code grant type). Use OAuth 2.0 Scopes for more granular access control.
 
-[OpenID Connect](http://openid.net/connect/) (OIDC), which builds on top of OAuth2, with its use of [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519), might be suitable in some cases, for example a federated system.
+In a more complex environment such as a microservice or federated system [OpenID Connect](http://openid.net/connect/), which builds on top of [OAuth 2.0](https://oauth.net/) using [JSON Web Tokens (JWT)](https://tools.ietf.org/html/rfc7519), may also be suitable. [OpenID Connect](http://openid.net/connect/) provides a granular and machine readable mechanism to request and receive information about authenticated sessions and end-users in a system.
 
 For privacy and allow lists
 ---------------------------
