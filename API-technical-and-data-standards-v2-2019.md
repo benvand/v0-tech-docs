@@ -87,7 +87,7 @@ We recommend you should:
 
 -   avoid JSON object keys that are not consistent for all objects of the same type, such as those derived from data as this adds friction for clients
 
-use consistent grammar case for object keys - choose under scores (eg `'email_address': 'example@example.com'`) or camel case (eg. `'emailAddress': 'example@example.com'`) and be consistent.
+- use consistent grammar case for object keys - choose under scores (eg `'email_address': 'example@example.com'`) or camel case (eg. `'emailAddress': 'example@example.com'`) and be consistent.
 
 To represent time and date
 --------------------------
