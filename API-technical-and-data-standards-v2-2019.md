@@ -359,17 +359,15 @@ Query strings should not be used for defining the behaviour of your API, for exa
 When iterating your API
 -----------------------
 
-When iterating your API to add new or improved functionality, you should minimise disruption for your users so that they do not incur unnecessary costs.
+When iterating your API to add new or improved functionality, you should minimise disruption for your users.
 
 To minimise disruption for users, you should:
 
--   make backwards compatible changes where possible - specify parsers ignore properties they don't expect or understand to ensure changes are backwards compatible (this allows you to add fields to update functionality without requiring changes to the client application)
+-   make backwards compatible changes where possible - your users can ignore properties they don't expect or understand. This allows you to add fields to deliver new functionality without requiring changes to the users application.
 
 -   make a new endpoint available for significant changes
 
--   provide notices for deprecated endpoints
-
-New endpoints do not always need to accompany new functionality if they still maintain backward compatibility
+-   provide notices for deprecated endpoints.
 
 When making a backwards incompatible change
 -------------------------------------------
