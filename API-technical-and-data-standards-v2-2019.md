@@ -308,19 +308,40 @@ Monitor APIs for unusual behaviour just like you'd closely monitor any website. 
 When naming and hosting your API
 --------------------------------
 
-Follow our guidance on [choosing a domain name](https://www.gov.uk/guidance/get-an-api-domain-on-govuk).
-
 All API naming in URLs (including the name of your API, namespaces and resources) should:
 
 -   use nouns rather than verbs
-
--   be short, simple and clearly understandable
-
+```
+https://example.api.gov.uk/users 
+```
+not
+```
+https://example.api.gov.uk/get-users
+```
+-   be short, simple and clearly understandable. Overly long or hard to understand urls may indicate that you should restructure your api or split/ move functionality to elsewhere.
+```
+https://example.api.gov.uk/users/123/discount
+```
+not
+```
+https://example.api.gov.uk/get-user-and-calculate-appropriate-discount/123
+```
 -   be human-guessable, avoiding technical or specialist terms where possible
-
+```
+https://example.api.gov.uk/users/123/discount
+```
+not
+```
+https://example.api.gov.uk/get-most-recent-pricing-object-for-user/123
+```
 -   use hyphens rather than underscores as word separators for multiword names
-
-For example: `[api-name].api.gov.uk`.
+```
+https://example.api.gov.uk/users/123/email-preferences
+```
+not
+```
+https://example.api.gov.uk/users/123/email_preferences
+```
 
 Avoid the use of namespaces
 ---------------------------
