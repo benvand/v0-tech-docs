@@ -298,12 +298,12 @@ You should:
 
 -   ensure the tokens you provide have the narrowest permissions possible (narrowing the permissions means there's a much lower risk to your API if the tokens are lost by users or compromised)
 
-Monitor APIs for unusual activity
----------------------------------
+Provide ways to monitor your APIs for unusual activity
+------------------------------------------------------
 
 Your API security is only as good as your day-to-day security processes.
 
-Monitor APIs for unusual behaviour just like you'd closely monitor any website. Look for changes in IP addresses or users using APIs at unusual times of the day. Read the National Cyber Security Centre (NCSC) guidance to find out how to [implement a monitoring strategy](https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security?curPage=/collection/10-steps-to-cyber-security/the-10-steps) and the specifics of [how to monitor the security status of networks and systems](https://www.ncsc.gov.uk/collection/nis-directive?curPage=/collection/nis-directive/nis-objective-c/c1-security-monitoring).
+It should be possible to monitor your API for unusual behaviour just like you'd closely monitor any website. Where appropriate you might look for changes in IP addresses or users using APIs at unusual times of the day. The UK has the National Cyber Security Centre (NCSC) guidance on how to [implement a monitoring strategy](https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security?curPage=/collection/10-steps-to-cyber-security/the-10-steps) and the specifics of [how to monitor the security status of networks and systems](https://www.ncsc.gov.uk/collection/nis-directive?curPage=/collection/nis-directive/nis-objective-c/c1-security-monitoring).
 
 When naming and hosting your API
 --------------------------------
