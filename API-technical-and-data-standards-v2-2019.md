@@ -312,35 +312,35 @@ All API naming in URLs (including the name of your API, namespaces and resources
 
 -   use nouns rather than verbs
 ```
-http://www.api.com/users 
+https://example.api.gov.uk/users 
 ```
 not
 ```
-http://www.api.com/get-users
+https://example.api.gov.uk/get-users
 ```
 -   be short, simple and clearly understandable. Overly long or hard to understand urls may indicate that you should restructure your api or split/ move functionality to elsewhere.
 ```
-http://www.api.com/users/123/discount
+https://example.api.gov.uk/users/123/discount
 ```
 not
 ```
-http://www.api.com/get-user-and-calculate-appropriate-discount/123
+https://example.api.gov.uk/get-user-and-calculate-appropriate-discount/123
 ```
 -   be human-guessable, avoiding technical or specialist terms where possible
 ```
-http://www.api.com/users/123/discount
+https://example.api.gov.uk/users/123/discount
 ```
 not
 ```
-http://www.api.com/get-most-recent-pricing-object-for-user/123
+https://example.api.gov.uk/get-most-recent-pricing-object-for-user/123
 ```
 -   use hyphens rather than underscores as word separators for multiword names
 ```
-http://www.api.com/users/123/email-preferences
+https://example.api.gov.uk/users/123/email-preferences
 ```
 not
 ```
-http://www.api.com/users/123/email_preferences
+https://example.api.gov.uk/users/123/email_preferences
 ```
 
 Avoid the use of namespaces
