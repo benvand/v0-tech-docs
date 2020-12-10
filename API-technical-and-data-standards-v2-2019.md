@@ -77,17 +77,17 @@ Only use another representation to build something in exceptional cases, like wh
 
 -   need to connect to a legacy system, for example, one that only uses XML
 
--   will receive clear advantages from complying with a broadly adopted standard (for example, [SAML](http://saml.xml.org/))
+-   will receive clear advantages from complying with a broadly adopted standard (for example, [SAML](http://saml.xml.org/))
 
 We recommend you should:
 
 -   create responses as a JSON object and not an array (JSON objects can contain JSON arrays) - arrays can limit the ability to include metadata about results and limit the API's ability to add additional top-level keys in the future
 
--   document your JSON object to ensure it is well described, and so that it is not treated as a sequential array
+-   document the JSON object/s your API returns. This helps users of your API to be sure they are using the object in the appropriate way
 
--   avoid unpredictable object keys such as those derived from data as this adds friction for clients
+-   avoid JSON object keys that are not consistent for all objects of the same type, such as those derived from data as this adds friction for clients
 
--   use consistent grammar case for object keys - choose under_score or CamelCase and be consistent
+use consistent grammar case for object keys - choose under scores (eg `'email_address': 'example@example.com'`) or camel case (eg. `'emailAddress': 'example@example.com'`) and be consistent.
 
 To represent time and date
 --------------------------
