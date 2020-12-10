@@ -41,15 +41,13 @@ In some cases, it may not be applicable to build a REST API, for example, when y
 Use HTTPS
 ---------
 
-You should use [HTTPS](https://www.ncsc.gov.uk/guidance/tls-external-facing-services) when creating APIs.
+You should use [HTTPS](https://www.ncsc.gov.uk/guidance/tls-external-facing-services) when creating APIs.
 
-Adding HTTPS will secure connections to your API, preserve user privacy, ensure data integrity, and authenticate the server providing the API. The [Service Manual provides more guidance on HTTPS](https://www.gov.uk/service-manual/technology/using-https).
+Adding HTTPS will secure connections to your API, preserve user privacy, ensure data integrity, and authenticate the server providing the API. The [Service Manual provides more guidance on HTTPS](https://www.gov.uk/service-manual/technology/using-https).
 
-Secure APIs using Transport Layer Security (TLS) v1.2. Do not use Secure Sockets Layer (SSL) or TLS v1.0.
+Secure APIs using Transport Layer Security (TLS) 1.2 or above. Do not use Secure Sockets Layer (SSL), TLS 1.0 or TLS 1.1 as [these are deprecated](https://chromestatus.com/feature/5759116003770368).
 
-There are multiple free and low-cost vendors that offer TLS certificates.
-
-Make sure potential API users can establish trust in your certificates. Make sure you have a robust process for timely [certificate renewal and revocation](https://www.ncsc.gov.uk/guidance/provisioning-and-securing-security-certificates).
+There are multiple free and low-cost vendors that offer TLS certificates. Make sure potential API users can establish trust in your certificates and make sure you have a robust process for timely [certificate renewal and revocation](https://www.ncsc.gov.uk/guidance/provisioning-and-securing-security-certificates).
 
 Consider linking data (hypermedia)
 ----------------------------------
