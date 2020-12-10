@@ -60,10 +60,9 @@ Use Uniform Resource Identifiers (URIs) to identify certain data:
 
 ```
 {
-"name": "Bob Person",
-"company": "https://your.api/company/bobscompany";
+    "name": "Bob Person",
+    "company": "https://your.api/company/bobscompany";
 }
-
 ```
 
 When your API returns data in response to an HTTP call, you should [use URIs](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) in the payload to identify certain data. Where appropriate, you should use specifications that use hypermedia, including [CURIES](https://www.w3.org/TR/curie/), [JSON-LD](https://json-ld.org/) or [HAL](https://en.wikipedia.org/wiki/Hypertext_Application_Language). This makes it easier to find those resources.
@@ -120,25 +119,21 @@ When responding, your API must answer the request fully and specifically. For ex
 For example:
 
 ```
-{ "married":"false" }
-
+{"married":"false" }
 ```
 
 Rather than:
 
 ```
-person": {
-"name": "Alice Betterland",
-"dob": "1999-01-01",
-"married": false,
-
-"validFrom":"2011-04-03",
-
-"validTo":""
+{
+    "individual": {
+        "name": "Alice Betterland",
+        "dob": "1999-01-01",
+        "married": false,
+        "validFrom":"2011-04-03",
+        "validTo":""
+    }
 }
-
-}
-
 ```
 
 Design data fields with user needs in mind
@@ -159,29 +154,21 @@ You should also make sure you provide all the relevant options. For example, the
 Depending on what you decide, you may choose the following payload as a response:
 
 ```
-{
-person": {
-"name": "Alice Wonderland",
-"dob": "1999-01-01",
-"married": true,
-
-"validFrom":"2010-03-12",
-
-"validTo":"2011-04-03"
-},
-
-person": {
-"name": "Alice Betterland",
-"dob": "1999-01-01",
-"married": false,
-
-"validFrom":"2011-04-03",
-
-"validTo":""
-}
-
-}
-
+"individuals": [
+    {
+        "name": "Alice Wonderland",
+        "dob": "1999-01-01",
+        "married": true,
+        "validFrom":"2010-03-12",
+        "validTo":"2011-04-03"
+    },{
+        "name": "Alice Betterland",
+        "dob": "1999-01-01",
+        "married": false,
+        "validFrom":"2011-04-03",
+        "validTo":""
+    }
+]
 ```
 
 Let users download whole datasets in bulk
@@ -348,13 +335,24 @@ If you reach a third level of granularity (sub-sub-resource), you should review 
 When using query arguments
 --------------------------
 
-You should use path parameters to identify a specific resource or resources. For example, `/users/1`.
+You should use path parameters to identify a specific resource or resources. For example:
 
-You should only allow query strings to be used in GET requests for filtering the values returned from an individual resource, for example `/users?state=active or /users?page=2`.
+```https://example.api.gov.uk/users/1```
 
-You should never use query strings in GET requests for identification purposes, for example, avoid using the query string `/users?id=1`.
+You should only allow query strings to be used in GET requests for filtering the values returned from an individual resource, for example:
 
-Query strings should not be used for defining the behaviour of your API, for example `/users?action=getUser&id=1`.
+```
+https://example.api.gov.uk/users?state=active
+https://example.api.gov.uk/users?page=2
+```
+
+You should never use query strings in GET requests for identification purposes, for example, avoid using the query string:
+
+```https://example.api.gov.uk/users?id=1```
+
+Query strings should not be used for defining the behaviour of your API, for example:
+
+```https://example.api.gov.uk/users?action=getUser&id=1```
 
 When iterating your API
 -----------------------
@@ -384,13 +382,18 @@ When you need to make a backwards incompatible change you should consider:
 
 Sometimes you'll need to make a larger change and simplify a complex object structure by folding data from multiple objects together. In this case, make a new object available at a new endpoint, for example:
 
-Combine data about users and accounts from:
+Combine data about users and accounts from both:
 
-`/v1/users/123` and `/v1/accounts/123`
+```
+https://example.api.gov.uk/v1/users/123
+https://example.api.gov.uk/v1/accounts/123
+```
 
 To produce:
 
-`/v1/consolidated-account/123`
+```
+https://example.api.gov.uk/v1/consolidated-account/123
+```
 
 Set clear deprecation policies
 ------------------------------
