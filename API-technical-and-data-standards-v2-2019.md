@@ -252,9 +252,7 @@ Authentication is required when you want to identify clients for the purposes of
 
 Your purpose will dictate the security requirements for your authentication solution.
 
-For example, if you need to identify users purely for rate limiting, you may not need to refresh user tokens very often as a token in the wrong hands will be unlikely to threaten your service.
-
-Make sure you consider your API may require more than just authenticating an organisation token, for example, when dealing with sensitive information such as medical data.
+For example, if you need to identify users purely for rate limiting, you may not need to refresh tokens very often as a token in the wrong hands will be unlikely to threaten your service.
 
 To provide application-level authorisation
 ------------------------------------------
